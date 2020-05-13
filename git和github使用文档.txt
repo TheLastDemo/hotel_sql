@@ -1,0 +1,39 @@
+1、git（https://git-scm.com/）是一个版本控制工具
+      github是一个用git做版本控制的项目托管平台。
+2、 上传至仓库步骤：   
+  （1）添加用户名及邮箱:
+   	git config --global user.name "用户名"
+   	git config --global user.email "邮箱"
+
+  （2）克隆仓库路径
+        	git clone <url>
+  （3）把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件
+         	git add .
+        或   
+	git add '文件名'
+    （4）用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明
+	git commit -m 'first commit'
+    （5）把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
+	git push -u origin master  或   git push
+3、其他命令            
+	git status   状态查询命令
+	git reflog 查看日志(包含未来版本)
+	git push 推到服务器(上传修改)
+	git pull 从服务器拉取(下载更新)
+
+	删除：
+	1）.在本地项目里，cd到本项目根路径下；
+	2）.执行添加： git rm -r --cached '文件夹名'
+	3）.提交注释：git commit -m '删除xxx'
+	4).最后：git push
+
+	创建切换分支
+	创建: git branch 分支名
+	切换到分支: git checkout 目标分支名
+	git checkout -b 分支名
+	回到主分支:git checkout master
+	删除分支:git branch -d 要删除的分支名
+
+	分支提交工作:
+	将分支push上去:git push origin 分支名
+ 
